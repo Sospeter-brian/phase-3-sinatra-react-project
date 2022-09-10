@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_09_10_141010) do
+ActiveRecord::Schema.define(version: 2022_09_10_163157) do
 
   create_table "donation_pledges", force: :cascade do |t|
     t.string "items_to_donate"
@@ -21,12 +21,12 @@ ActiveRecord::Schema.define(version: 2022_09_10_141010) do
   create_table "donors", force: :cascade do |t|
     t.string "name"
     t.integer "phone_number"
-    t.string "donation_pledges"
+    t.string "donation_pledge"
   end
 
   create_table "recipients", force: :cascade do |t|
     t.string "name"
-    t.string "donation_pledges"
+    t.string "donation_pledge"
   end
 
 end
