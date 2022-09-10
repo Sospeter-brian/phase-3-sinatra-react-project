@@ -2,7 +2,7 @@ puts "🌱 Seeding spices..."
 
 # Seed your database here
 #donors
-donor1 = Donor.create(name:"Abel",phone_number:717206899,donation_pledge:"Clothing")
+donor1 = Donor.create(name:"Abel", phone_number:717206899,donation_pledge:"Clothing")
 donor2 = Donor.create(name:"Joseph",phone_number:726262895,donation_pledge:"Linens")
 donor3 = Donor.create(name:"Eric",phone_number:707499288,donation_pledge:"Food")
 
