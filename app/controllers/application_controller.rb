@@ -16,13 +16,13 @@ end
 
 #get donation_pledges
    
-get "/donation_pledges/:id" do
-  pledge = DonationPledge.find(params[:id])
+get "/donationpledges/:id" do
+  pledge = Donationpledge.find(params[:id])
   pledge.to_json
 end
 
-get "/donation_pledges" do 
-  pledges = DonationPledge.all
+get "/donationpledges" do 
+  pledges = Donationpledge.all
   pledges.to_json
 end
 
@@ -41,14 +41,13 @@ end
 post '/donors' do
   donor = Donor.create(
 name: params[:name],
-phone_number: params[:phone_number],
-donation_pledge: params[:donation_pledge]
+phone_number: params[:phone_number]
   )
   donor.to_json
 end
 
 post '/donation_pledges' do
-  pledge = DonationPledge.create(
+  pledge = Donationpledge.create(
     items_to_donate: params[:items_to_donate],
     donor_id: params[:donor_id],
     recipient_id: params[:recipient_id]
@@ -57,8 +56,7 @@ post '/donation_pledges' do
 end
 post '/recipients' do
   recipient = Recipient.create(
-name: params[:name],
-donation_pledge: params[:donation_pledge]
+name: params[:name]
   )
   recipient.to_json
 end
@@ -70,8 +68,8 @@ delete '/donors/:id' do
   delete_donor.to_json
 end
 
-delete '/donation_pledges/:id' do
-  pledge = DonationPledge.find(params[:id])
+delete '/donationpledges/:id' do
+  pledge = Donationpledge.find(params[:id])
   pledge.destroy
   pledge.to_json
 end

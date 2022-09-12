@@ -24,10 +24,12 @@ ActiveRecord::Schema.define(version: 2022_09_10_141010) do
   create_table "donors", force: :cascade do |t|
     t.string "name"
     t.integer "phone_number"
+    t.string "donationpledge"
   end
 
   create_table "recipients", force: :cascade do |t|
     t.string "name"
+    t.string "donationpledge"
   end
 
 end
