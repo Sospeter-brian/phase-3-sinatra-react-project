@@ -1,6 +1,6 @@
-class DonationPledges < ActiveRecord::Migration[6.1]
+class CreateDonationpledges < ActiveRecord::Migration[6.1]
   def change
-    create_table :donation_pledges do |t|
+    create_table :donationpledges do |t|
       t.string :items_to_donate
       t.integer :donor_id
       t.integer :recipient_id
