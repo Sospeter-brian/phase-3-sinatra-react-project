@@ -13,7 +13,7 @@ test:
 
 production:
   <<: *default
-  database: dbdeln9psr3cah
-  username: rydljwkvcocdkz
-  host: ec2-52-207-90-231.compute-1.amazonaws.com
-  password: d2f268c03a31239afef9f9b6be0f67f7c204495accb36cb9f472462016e0020f
+  database: dbpeu03bl95ubv
+  username: eahrscyajcqpoe
+  host: ec2-44-209-158-64.compute-1.amazonaws.com
+  password: 43c6121818e2f0ee16214f6e966128e2a9bb52134558debe54a97912ca5f0227
